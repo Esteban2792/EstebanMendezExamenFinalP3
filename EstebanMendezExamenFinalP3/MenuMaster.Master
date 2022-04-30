@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MenuMaster.Master.cs" Inherits="EstebanMendezExamenFinalP3.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+            <link rel="stylesheet" href="/CSS/Menu.css" type="text/css" media="screen" />
+
+    <title>Menu Master</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+               <div>
+            <ul>
+                <li><a href="Inicio.aspx">Inicio</a></li>
+                <%--  <li><a href="#news">Reportes</a></li>--%>
+                <li class="dropdown">
+                    <a href="AgregarLibros.aspx" class="dropbtn">Agregar libros</a>
+                    <div class="dropdown-content">
+                        <a href=".aspx">Borrar libros</a>                      
+                    </div>
+                </li>
+                
+                <%--  <li><a href="#contact"></a></li>--%>
+                <li style="float: right"><a class="active" href="Inicio.aspx">Salir</a></li>
+            </ul>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
